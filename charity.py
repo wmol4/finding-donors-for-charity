@@ -33,3 +33,17 @@ print "Total number of records: {}".format(n_records)
 print "Individuals making more than $50,000: {}".format(n_greater_50k)
 print "Individuals making at most $50,000: {}".format(n_at_most_50k)
 print "Percentage of individuals making more than $50,000: {:.2f}%".format(greater_percent)
+
+# Split the data into features and target label
+income_raw = data['income']
+features_raw = data.drop('income', axis = 1)
+
+# Visualize skewed continuous features of original data
+vs.distribution(data)
+
+# Log-transform the skewed features
+skewed = ['capital-gain', 'capital-loss']
+features_raw[skewed] = data[skewed].apply(lambda x: np.log(x + 1))
+
+# Visualize the new log distributions
+vs.distribution(features_raw, transformed = True)
