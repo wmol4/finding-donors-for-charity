@@ -13,3 +13,7 @@ https://archive.ics.uci.edu/ml/datasets/Census+Income
 
 ![image](https://cloud.githubusercontent.com/assets/24555661/26035880/466e4bb6-3891-11e7-87fb-86aaa8dd37e2.png)
 
+# one-hot encoding features
+
+![image](https://cloud.githubusercontent.com/assets/24555661/26069715/243fdffe-395f-11e7-90a1-a7fa2e2398a4.png)
+
