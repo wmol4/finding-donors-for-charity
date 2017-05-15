@@ -47,3 +47,29 @@ features_raw[skewed] = data[skewed].apply(lambda x: np.log(x + 1))
 
 # Visualize the new log distributions
 vs.distribution(features_raw, transformed = True)
+
+# Normalize the features
+# Import sklearn.preprocessing.StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+
+# Initialize a scaler, then apply it to the features
+scaler = MinMaxScaler()
+numerical = ['age', 'education-num', 'capital-gain', 'capital-loss', 'hours-per-week']
+features_raw[numerical] = scaler.fit_transform(data[numerical])
+
+# Show an example of a record with scaling applied
+display(features_raw.head(n = 1))
+
+#preprocessing
+# TODO: One-hot encode the 'features_raw' data using pandas.get_dummies()
+features = pd.get_dummies(features_raw)
+
+# TODO: Encode the 'income_raw' data to numerical values
+income = income_raw.astype("category").cat.codes
+
+# Print the number of features after one-hot encoding
+encoded = list(features.columns)
+print "{} total features after one-hot encoding.".format(len(encoded))
+
+# Uncomment the following line to see the encoded feature names
+print encoded
