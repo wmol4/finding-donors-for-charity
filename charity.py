@@ -83,3 +83,19 @@ X_train, X_test, y_train, y_test = train_test_split(features, income, test_size 
 # Show the results of the split
 print "Training set has {} samples.".format(X_train.shape[0])
 print "Testing set has {} samples.".format(X_test.shape[0])
+
+#simple predictor, and comparing accuracy and f-beta score (for precision and recall)
+#precision = true_positives / (true_positives + false_positives)
+#recall = true_positives / (true_positives + false_negatives)
+
+# TODO: Calculate accuracy
+accuracy = (float(n_greater_50k) / n_records)
+
+# TODO: Calculate F-score using the formula above for beta = 0.5
+precision = float(n_greater_50k) / (float(n_greater_50k) + float(n_at_most_50k))
+recall = float(n_greater_50k) / (float(n_greater_50k) + 0)
+
+fscore = (1 + 0.5 ** 2) * ((precision * recall) / (0.5 ** 2 * precision + recall))
+
+# Print the results 
+print "Naive Predictor: [Accuracy score: {:.4f}, F-score: {:.4f}]".format(accuracy, fscore)
