@@ -17,3 +17,6 @@ https://archive.ics.uci.edu/ml/datasets/Census+Income
 
 ![image](https://cloud.githubusercontent.com/assets/24555661/26069715/243fdffe-395f-11e7-90a1-a7fa2e2398a4.png)
 
+# performance metrics for the three different supervised learning models
+
+![image](https://cloud.githubusercontent.com/assets/24555661/26279193/42fa0f0a-3d6a-11e7-8969-024c23d1b117.png)
