@@ -156,3 +156,29 @@ def train_predict(learner, sample_size, X_train, y_train, X_test, y_test):
         
     # Return the results
     return results
+# TODO: Import the three supervised learning models from sklearn
+from sklearn import tree
+from sklearn import ensemble
+from sklearn import naive_bayes
+
+# TODO: Initialize the three models
+clf_A = tree.DecisionTreeClassifier(random_state = 7)
+clf_B = ensemble.AdaBoostClassifier(random_state = 7)
+clf_C = naive_bayes.GaussianNB()
+
+# TODO: Calculate the number of samples for 1%, 10%, and 100% of the training data
+samples_1 = int(X_train.shape[0] * 0.01)
+samples_10 = int(X_train.shape[0] * 0.1)
+samples_100 = int(X_train.shape[0])
+
+# Collect results on the learners
+results = {}
+for clf in [clf_A, clf_B, clf_C]:
+    clf_name = clf.__class__.__name__
+    results[clf_name] = {}
+    for i, samples in enumerate([samples_1, samples_10, samples_100]):
+        results[clf_name][i] = \
+        train_predict(clf, samples, X_train, y_train, X_test, y_test)
+
+# Run metrics visualization for the three supervised learning models chosen
+vs.evaluate(results, accuracy, fscore)
