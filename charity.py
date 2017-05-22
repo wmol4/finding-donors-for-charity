@@ -219,3 +219,5 @@ print "F-score on testing data: {:.4f}".format(fbeta_score(y_test, predictions, 
 print "\nOptimized Model\n------"
 print "Final accuracy score on the testing data: {:.4f}".format(accuracy_score(y_test, best_predictions))
 print "Final F-score on the testing data: {:.4f}".format(fbeta_score(y_test, best_predictions, beta = 0.5))
+
+#plot 5 top features
