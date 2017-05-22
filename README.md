@@ -22,3 +22,7 @@ https://archive.ics.uci.edu/ml/datasets/Census+Income
 # performance metrics for the three different supervised learning models
 
 ![image](https://cloud.githubusercontent.com/assets/24555661/26279193/42fa0f0a-3d6a-11e7-8969-024c23d1b117.png)
+
+# normalized weights for the first five most predictive features
+
+![image](https://cloud.githubusercontent.com/assets/24555661/26327592/3d9c0db2-3efd-11e7-9aa0-62abb676095a.png)
